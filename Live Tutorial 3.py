@@ -4,9 +4,31 @@ g.graphplot(title = 'Irish Map',
                         edge_thickness=3,
                         edge_color='green',
                        vertex_color='Red',
-                      edge_labels=True).plot()p.is_connected()g.connected_components()g.connected_components()G = Graph( { 0 : [1, 3], 1 : [2], 2 : [3], 4 : [5, 6], 5 : [6] }); G
+                      edge_labels=True).plot()
+p.is_connected()
+# To check connected components
+G = Graph( { 0 : [1, 3], 1 : [2], 2 : [3], 4 : [5, 6], 5 : [6] }); G
 L = G.connected_components_subgraphs()
-graphs_list.show_graphs(L)p.is_connected()#OPTIONAL TASK of Lab 4
+graphs_list.show_graphs(L) 
+#OPTIONAL  LollipopGraph
+x = graphs.LollipopGraph(4,2); x.show()
+print "Summary"
+print "*****************************"
+print("Test is 1 a cute vertex: "),x.is_cut_vertex(1) 
+print("Tes t is 2 a cute vertex: "),x.is_cut_vertex(2) 
+print("Test is 3 a cute vertex: "),x.is_cut_vertex(3) 
+print("Test is 4 a cute vertex: "),x.is_cut_vertex(4) 
+print("Test is 5 a cute vertex: "),x.is_cut_vertex(5) 
+print ("")
+print("Test if (0,1) is a cute edge:"), x.is_cut_edge(0,1) 
+print("Test if (0,2) is a cute edge:"), x.is_cut_edge(0,2) 
+print("Test if (0,3) is a cute edge:"), x.is_cut_edge(0,3) 
+print("Test if (1,2) is a cute edge:"), x.is_cut_edge(1,2) 
+print("Test if (1,3) is a cute edge:"), x.is_cut_edge(1,3) 
+print("Test if (2,3) is a cute edge:"), x.is_cut_edge(2,3) 
+print("Test if (3,4) is a cute edge:"), x.is_cut_edge(3,4) 
+print("Test if (4,5) is a cute edge:"), x.is_cut_edge(4,5)
+ #OPTIONAL TASK of Lab 4
 #GRAPH G
 g = DiGraph(6,multiedges = True)
 g.relabel({0:'u1', 1:'u2', 2:'u3', 3:'u4', 4:'u5', 5: 'u6'})
